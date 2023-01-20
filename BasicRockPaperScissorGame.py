@@ -45,4 +45,4 @@ else:
 	print('INVALID INPUT')
 	
 	
-print('Thank You For Playing(I made this code in 2 min)')
+print('Thank You For Playing(I coded this game in 2 min)')
