@@ -1,5 +1,5 @@
 # Character User Interface Programs
-A collection of basic programs at beginner, intermediate, and advanced levels.
+A collection of basic programs at beginner, intermediate, and advanced levels [NOTE : Some programs may by GUI].
 
 ## Introduction
 
