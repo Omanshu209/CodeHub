@@ -85,7 +85,7 @@ class Monster
 };
 
 //create as many monsters as you want!
-Monster Monsters[] = {Monster("Pikachu",250,80,0,0,80,35,10,0,90,50,0,20,100),Monster("Charizard",400,75,0,10,60,125,0,40,40,90,5,0,20),Monster("Greninja",325,20,20,0,80,85,0,15,65,45,5,0,35)};//All the monsters should be inside this string data type array
+Monster Monsters[] = {Monster("Pikachu",250,80,0,0,80,35,10,0,90,50,0,20,100),Monster("Charizard",400,75,0,10,60,125,0,40,40,90,5,0,20),Monster("Greninja",325,20,20,0,80,85,0,15,65,45,5,0,35),Monster("Blaziken",375,100,0,50,25,0,50,0,40,55,5,0,50),Monster("Bisharp",300,200,0,100,10,10,10,0,90,150,0,50,25),Monster("Hoopa",500,1000,0,400,5,0,100,0,10,15,15,0,55),Monster("Alakazam",275,25,25,0,95,190,0,100,65,65,0,25,70)};//All the monsters should be inside this string data type array
 
 void game()
 {
@@ -215,16 +215,21 @@ void game()
 		
 		else
 		{
-			
-			if(Monsters[computer_monster].getHP() <= 0)
+			if(Monsters[computer_monster].getHP() <= 0 && Monsters[user_monster-1].getHP() <= 0)
 			{
-				cout<<"\n--------------------\nYou Win !\n--------------------"<<endl;
+				cout<<"\n--------------------\nDRAW !\n--------------------"<<endl;
 				break;
 			}
 			
-			if(Monsters[user_monster-1].getHP() <= 0)
+			else if(Monsters[computer_monster].getHP() <= 0)
 			{
-				cout<<"\n--------------------\nYou Lose !\n--------------------"<<endl;
+				cout<<"\n--------------------\nYOU WIN !\n--------------------"<<endl;
+				break;
+			}
+			
+			else if(Monsters[user_monster-1].getHP() <= 0)
+			{
+				cout<<"\n--------------------\nYOU LOSE !\n--------------------"<<endl;
 				break;
 			}
 			
@@ -239,4 +244,4 @@ int main()
 	game();
 	return 0;
 }
-//Developed by Omanshu
+//Developed By Omanshu
