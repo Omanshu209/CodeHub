@@ -85,7 +85,33 @@ class Monster
 };
 
 //create as many monsters as you want!
-Monster Monsters[] = {Monster("Pikachu",250,80,0,0,80,35,10,0,90,50,0,20,100),Monster("Charizard",400,75,0,10,60,125,0,40,40,90,5,0,20),Monster("Greninja",325,20,20,0,80,85,0,15,65,45,5,0,35),Monster("Blaziken",375,100,0,50,25,0,50,0,40,55,5,0,50),Monster("Bisharp",300,200,0,100,10,10,10,0,90,150,0,50,25),Monster("Hoopa",500,1000,0,400,5,0,100,0,10,15,15,0,55),Monster("Alakazam",275,25,25,0,95,190,0,100,65,65,0,25,70)};//All the monsters should be inside this string data type array
+Monster Monsters[] = {
+	Monster("Pikachu",250,80,0,0,80,35,10,0,90,50,0,20,100),
+	Monster("Charizard",400,75,0,10,60,125,0,40,40,90,5,0,20),
+	Monster("Greninja",325,20,20,0,80,85,0,15,65,45,5,0,35),
+	Monster("Blaziken",375,100,0,50,25,0,50,0,40,55,5,0,50),
+	Monster("Bisharp",300,200,0,100,10,10,10,0,90,150,0,50,25),
+	Monster("Hoopa",500,1000,0,400,15,0,100,0,10,15,15,0,55),
+	Monster("Alakazam",275,25,25,0,95,190,0,100,65,65,0,25,70),
+	Monster("Gyarados", 450, 90, 0, 30, 70, 120, 0, 50, 50, 70, 0, 0, 25),
+	Monster("Dragonite", 500, 90, 10, 0, 40, 120, 0, 20, 20, 70, 0, 200, 100),
+	Monster("Mewtwo", 600, 100, 0, 50, 70, 130, 0, 50, 15, 20, 0, 0, 100),
+	Monster("Snorlax", 700, 80, 50, 0, 20, 0, 100, 0, 8, 250, 0, 500, 80),
+	Monster("Gengar", 350, 50, 0, 0, 90, 90, 0, 0, 25, 0, 50, 0, 30),
+	Monster("Tyranitar", 600, 120, 0, 20, 30, 100, 0, 50, 30, 80, 0, 0, 12),
+	Monster("Lucario", 400, 80, 20, 0, 10, 90, 0, 0, 25, 40, 0, 80, 40),
+	Monster("Salamence", 500, 100, 0, 500, 100, 120, 0, 0, 25, 70, 10, 0, 25),
+	Monster("Metagross", 550, 110, 0, 30, 50, 90, 0, 50, 25, 70, 0, 0, 30),
+	Monster("Haxorus", 550, 60, 0, 0, 60, 70, 0, 0, 10, 80, 0, 80, 20),
+	Monster("Hydreigon", 600, 110, 0, 0, 17, 120, 0, 20, 25, 70, 0, 0, 30),
+	Monster("Zoroark", 400, 40, 0, 0, 80, 70, 0, 0, 40, 100, 0, 0, 10),
+	Monster("Volcarona", 450, 0, 20, 0, 70, 110, 0, 30, 25, 80, 0, 0, 20),
+	Monster("Chandelure", 400, 90, 0, 0, 23, 110, 0, 20, 25, 70, 0, 0, 30),
+	Monster("Galvantula", 350, 70, 0, 250, 90, 60, 0, 0, 10, 60, 0, 0, 35),
+	Monster("Krookodile", 450, 100, 0, 20, 30, 70, 0, 0, 35, 80, 0, 0, 25),
+	Monster("Excadrill", 500, 100, 0, 20, 50, 120, 0, 120, 25, 80, 0, 0, 20),
+	Monster("Froslass", 350, 30, 0, 0, 80, 80, 0, 0, 30, 60, 0, 0, 35)
+};//All the monsters should be inside this string data type array
 
 void game()
 {
