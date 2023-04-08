@@ -134,7 +134,7 @@ void game()
 			{
 				computer_monster = rand()%(sizeof(Monsters) / sizeof(Monsters[0]));
 			}
-			cout<<"\n\n--------------------\nComputer Choosed "<<Monsters[computer_monster].getName()<<"\n--------------------"<<endl;
+			cout<<"\n\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Appeared !\n--------------------"<<endl;
 			break;
 		}
 		
@@ -151,7 +151,7 @@ void game()
 		
 		if(Monsters[user_monster-1].getHP() > 0 && Monsters[computer_monster].getHP() > 0)
 		{
-			cout<<"--------------------\nYour HP : "<<Monsters[user_monster-1].getHP()<<"\nComputer's HP : "<<Monsters[computer_monster].getHP()<<"\n--------------------"<<endl;
+			cout<<"--------------------\nYour HP : "<<Monsters[user_monster-1].getHP()<<"\n"<<Monsters[computer_monster].getName()<<"'s (Opponent) HP : "<<Monsters[computer_monster].getHP()<<"\n--------------------"<<endl;
 			cout<<"--------------------\nYour("<<Monsters[user_monster-1].getName()<<") Moves -- "<<"\n\n"<<"\tMove 1 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[0][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[0][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[0][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[0][3]<<"\n\tMove 2 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[1][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[1][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[1][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[1][3]<<"\n\tMove 3 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[2][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[2][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[2][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[2][3]<<"\n--------------------"<<endl;
 			cout<<"Choose Your Move(integer only) : ";
 			cin>>user_move;
@@ -203,7 +203,7 @@ void game()
 				}
 			}
 			computer_move = rand()%3+1;
-			cout<<"\n--------------------\nComputer Choosed Move "<<computer_move<<" !\n--------------------"<<endl;
+			cout<<"\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Choosed Move "<<computer_move<<" !\n--------------------"<<endl;
 			switch(computer_move)
 				{
 					case 1:
