@@ -15,14 +15,14 @@ class Monster
 		
 	public:
 		
-		int moves[3][4];//[Move1-[Attack,Heal,Self-Damage,Probability],Move2-........]
+		int moves[3][4], MaxHP;//[Move1-[Attack,Heal,Self-Damage,Probability],Move2-........]
 		
 		Monster(string name,int hp,int m1a,int m1h,int m1sd,int m1p,int m2a,int m2h,int m2sd,int m2p,int m3a,int m3h,int m3sd,int m3p):name(name),hp(hp)
 		{
 			moves[0][0] = m1a;moves[0][1] = m1h;moves[0][2] = m1sd;moves[0][3] = m1p;
 			moves[1][0] = m2a;moves[1][1] = m2h;moves[1][2] = m2sd;moves[1][3] = m2p;
 			moves[2][0] = m3a;moves[2][1] = m3h;moves[2][2] = m3sd;moves[2][3] = m3p;
-			
+			MaxHP = hp;
 			srand((unsigned)time(0));
 		}
 		
@@ -35,13 +35,21 @@ class Monster
 		{
 			return name;
 		}
+		
+		//The function below generate an error
 		/*int getMoves()
 		{
 			return moves;
 		}*/
 		
+		void setHPtoMax()
+		{
+			hp = MaxHP;
+		}
+		
 		bool Move1(Monster &obj)
 		{
+			
 			if(moves[0][3] >= rand()%100+1)
 			{
 				obj.hp -= moves[0][0];
@@ -49,14 +57,17 @@ class Monster
 				hp -= moves[0][2];
 				return true;
 			}
+			
 			else
 			{
 				return false;
 			}
+			
 		}
 		
 		bool Move2(Monster &obj)
 		{
+			
 			if(moves[1][3] >= rand()%100+1)
 			{
 				obj.hp -= moves[1][0];
@@ -64,14 +75,17 @@ class Monster
 				hp -= moves[1][2];
 				return true;
 			}
+			
 			else
 			{
 				return false;
 			}
+			
 		}
 		
 		bool Move3(Monster &obj)
 		{
+			
 			if(moves[2][3] >= rand()%100+1)
 			{
 				obj.hp -= moves[2][0];
@@ -79,10 +93,12 @@ class Monster
 				hp -= moves[2][2];
 				return true;
 			}
+			
 			else
 			{
 				return false;
 			}
+			
 		}
 };
 
@@ -118,168 +134,249 @@ Monster Monsters[] = {
 void game()
 {
 	//Attacking other monster -- Monster1.Move1/Move2/Move3(Monster2);
+	bool undefeated = true;
+	char printMonstersAgain = 'y';
+	int MatchesWon = 0,user_monster, computer_monster, user_move, computer_move;
+	
+	//Game starts
 	cout<<"--------------------\nMONSTER BATTLE !\n-------------------"<<endl;
 	this_thread::sleep_for(chrono::seconds(1));
-	cout<<"\nMonsters Available -- \n\n"<<endl;
-	this_thread::sleep_for(chrono::seconds(1));
-	for(int i = 0;i<sizeof(Monsters) / sizeof(Monsters[0]);i++)
-	{
-		cout<<i+1<<") "<<Monsters[i].getName()<<"\n\n"<<"\tMove 1 - \n\t\tAttack -- "<<Monsters[i].moves[0][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[0][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[0][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[0][3]<<"\n\tMove 2 - \n\t\tAttack -- "<<Monsters[i].moves[1][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[1][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[1][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[1][3]<<"\n\tMove 3 - \n\t\tAttack -- "<<Monsters[i].moves[2][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[2][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[2][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[2][3]<<endl;
-		this_thread::sleep_for(chrono::milliseconds(500));
-	}
-	int user_monster, computer_monster = rand()%(sizeof(Monsters) / sizeof(Monsters[0])), user_move, computer_move;
-	cout<<"\n--------------------\n\nChoose Your Monster (Integer Input Only) : ";
-	cin>>user_monster;
 	
-	while(true)
+	while(undefeated)
 	{
-		if(user_monster > 0 && user_monster <=sizeof(Monsters) / sizeof(Monsters[0]))
-		{
-			cout<<"\n\n--------------------\nYou Choosed "<<Monsters[user_monster-1].getName()<<"\n--------------------"<<endl;
-			this_thread::sleep_for(chrono::seconds(1));
-			while(computer_monster == user_monster-1)
-			{
-				computer_monster = rand()%(sizeof(Monsters) / sizeof(Monsters[0]));
-			}
-			cout<<"\n\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Appeared !\n--------------------"<<endl;
-			this_thread::sleep_for(chrono::seconds(1));
-			break;
-		}
+		cout<<"\n--------------------\nMatch "<<MatchesWon+1<<"\n--------------------\n"<<endl;
+		this_thread::sleep_for(chrono::seconds(2));
 		
-		else
+		if(printMonstersAgain == 'y')
 		{
-			cout<<"ERROR : Try Again !"<<endl;
-			cout<<"\n--------------------\n\nChoose Your Monster (Integer Input Only) : ";
-			cin>>user_monster;
-		}
-	}
-	
-	while(true)
-	{
-		
-		if(Monsters[user_monster-1].getHP() > 0 && Monsters[computer_monster].getHP() > 0)
-		{
-			cout<<"--------------------\nYour HP : "<<Monsters[user_monster-1].getHP()<<"\n"<<Monsters[computer_monster].getName()<<"'s (Opponent) HP : "<<Monsters[computer_monster].getHP()<<"\n--------------------"<<endl;
-			cout<<"--------------------\nYour("<<Monsters[user_monster-1].getName()<<") Moves -- "<<"\n\n"<<"\tMove 1 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[0][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[0][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[0][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[0][3]<<"\n\tMove 2 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[1][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[1][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[1][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[1][3]<<"\n\tMove 3 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[2][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[2][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[2][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[2][3]<<"\n--------------------"<<endl;
+			cout<<"\nMonsters Available -- \n\n"<<endl;
 			this_thread::sleep_for(chrono::seconds(1));
-			cout<<"Choose Your Move(integer only) : ";
-			cin>>user_move;
 			
-			while(true)
+			for(int i = 0;i<sizeof(Monsters) / sizeof(Monsters[0]);i++)
 			{
-				if(user_move > 0 && user_move <= 3)
+				cout<<i+1<<") "<<Monsters[i].getName()<<"\n\n"<<"\tMove 1 - \n\t\tAttack -- "<<Monsters[i].moves[0][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[0][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[0][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[0][3]<<"\n\tMove 2 - \n\t\tAttack -- "<<Monsters[i].moves[1][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[1][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[1][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[1][3]<<"\n\tMove 3 - \n\t\tAttack -- "<<Monsters[i].moves[2][0]<<"\n\t\tHeal -- "<<Monsters[i].moves[2][1]<<"\n\t\tSelf-Damage -- "<<Monsters[i].moves[2][2]<<"\n\t\tProbability -- "<<Monsters[i].moves[2][3]<<endl;
+				this_thread::sleep_for(chrono::milliseconds(500));
+			}
+			
+		}
+		
+		computer_monster = rand()%(sizeof(Monsters) / sizeof(Monsters[0]));
+		cout<<"\n--------------------\n\nChoose Your Monster (Integer Input Only) : ";
+		cin>>user_monster;
+		
+		while(true)
+		{
+			
+			if(user_monster > 0 && user_monster <=sizeof(Monsters) / sizeof(Monsters[0]))
+			{
+				cout<<"\n\n--------------------\nYou Choosed "<<Monsters[user_monster-1].getName()<<"\n--------------------"<<endl;
+				this_thread::sleep_for(chrono::seconds(1));
+				
+				while(computer_monster == user_monster-1)
 				{
-					cout<<"\n--------------------\nYou Choosed Move "<<user_move<<" !\n--------------------"<<endl;
-					this_thread::sleep_for(chrono::seconds(1));
-					switch(user_move)
+					computer_monster = rand()%(sizeof(Monsters) / sizeof(Monsters[0]));
+				}
+				
+				cout<<"\n\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Appeared !\n--------------------"<<endl;
+				this_thread::sleep_for(chrono::seconds(1));
+				break;
+			}
+			
+			else
+			{
+				cout<<"ERROR : Try Again !"<<endl;
+				cout<<"\n--------------------\n\nChoose Your Monster (Integer Input Only) : ";
+				cin>>user_monster;
+			}
+			
+		}
+		
+		while(true)
+		{
+			
+			if(Monsters[user_monster-1].getHP() > 0 && Monsters[computer_monster].getHP() > 0)
+			{
+				cout<<"--------------------\nYour HP : "<<Monsters[user_monster-1].getHP()<<"\n"<<Monsters[computer_monster].getName()<<"'s (Opponent) HP : "<<Monsters[computer_monster].getHP()<<"\n--------------------"<<endl;
+				cout<<"--------------------\nYour("<<Monsters[user_monster-1].getName()<<") Moves -- "<<"\n\n"<<"\tMove 1 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[0][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[0][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[0][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[0][3]<<"\n\tMove 2 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[1][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[1][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[1][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[1][3]<<"\n\tMove 3 - \n\t\tAttack -- "<<Monsters[user_monster-1].moves[2][0]<<"\n\t\tHeal -- "<<Monsters[user_monster-1].moves[2][1]<<"\n\t\tSelf-Damage -- "<<Monsters[user_monster-1].moves[2][2]<<"\n\t\tProbability -- "<<Monsters[user_monster-1].moves[2][3]<<"\n--------------------"<<endl;
+				this_thread::sleep_for(chrono::seconds(1));
+				cout<<"Choose Your Move(integer only) : ";
+				cin>>user_move;
+				
+				while(true)
+				{
+					
+					if(user_move > 0 && user_move <= 3)
 					{
-						case 1:
-							if(Monsters[user_monster-1].Move1(Monsters[computer_monster]))
-							{
-								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-							}
-							else
-							{
-								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-							}
-							this_thread::sleep_for(chrono::seconds(1));
-							break;
-						case 2:
-							if(Monsters[user_monster-1].Move2(Monsters[computer_monster]))
-							{
-								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-							}
-							else
-							{
-								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-							}
-							this_thread::sleep_for(chrono::seconds(1));
-							break;
-						case 3:
-							if(Monsters[user_monster-1].Move3(Monsters[computer_monster]))
-							{
-								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-							}
-							else
-							{
-								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-							}
-							this_thread::sleep_for(chrono::seconds(1));
-							break;
+						cout<<"\n--------------------\nYou Choosed Move "<<user_move<<" !\n--------------------"<<endl;
+						this_thread::sleep_for(chrono::seconds(1));
+						
+						switch(user_move)
+						{
+							case 1:
+							
+								if(Monsters[user_monster-1].Move1(Monsters[computer_monster]))
+								{
+									cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+								}
+								
+								else
+								{
+									cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+								}
+								
+								this_thread::sleep_for(chrono::seconds(1));
+								break;
+							
+							case 2:
+							
+								if(Monsters[user_monster-1].Move2(Monsters[computer_monster]))
+								{
+									cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+								}
+								
+								else
+								{
+									cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+								}
+								
+								this_thread::sleep_for(chrono::seconds(1));
+								break;
+								
+							case 3:
+							
+								if(Monsters[user_monster-1].Move3(Monsters[computer_monster]))
+								{
+									cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+								}
+								
+								else
+								{
+									cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+								}
+								
+								this_thread::sleep_for(chrono::seconds(1));
+								break;
+						}
+						
+						break;
 					}
+					
+					else
+					{
+						cout<<"\nError\n--------------------\nChoose Your Move(integer only) : ";
+						cin>>user_move;
+					}
+					
+				}
+				
+				computer_move = rand()%3+1;
+				cout<<"\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Choosed Move "<<computer_move<<" !\n--------------------"<<endl;
+				this_thread::sleep_for(chrono::seconds(1));
+				
+				switch(computer_move)
+				{
+						case 1:
+						
+							if(Monsters[computer_monster].Move1(Monsters[user_monster-1]))
+							{
+								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+							}
+							
+							else
+							{
+								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+							}
+							
+							this_thread::sleep_for(chrono::seconds(1));
+							break;
+							
+						case 2:
+						
+							if(Monsters[computer_monster].Move2(Monsters[user_monster-1]))
+							{
+								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+							}
+							
+							else
+							{
+								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+							}
+							
+							this_thread::sleep_for(chrono::seconds(1));
+							break;
+							
+						case 3:
+						
+							if(Monsters[computer_monster].Move3(Monsters[user_monster-1]))
+							{
+								cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
+							}
+							
+							else
+							{
+								cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
+							}
+							
+							this_thread::sleep_for(chrono::seconds(1));
+							break;
+							
+					}
+			}
+			
+			else
+			{
+				
+				if(Monsters[computer_monster].getHP() <= 0 && Monsters[user_monster-1].getHP() <= 0)
+				{
+					cout<<"\n--------------------\nDRAW !\n--------------------"<<endl;
+					this_thread::sleep_for(chrono::seconds(1));
+					Monsters[computer_monster].setHPtoMax();
+					Monsters[user_monster-1].setHPtoMax();
 					break;
 				}
-				else
+				
+				else if(Monsters[computer_monster].getHP() <= 0)
 				{
-					cout<<"\nError\n--------------------\nChoose Your Move(integer only) : ";
-					cin>>user_move;
+					cout<<"\n--------------------\nYOU WIN !\n--------------------"<<endl;
+					this_thread::sleep_for(chrono::seconds(1));
+					MatchesWon += 1;
+					Monsters[computer_monster].setHPtoMax();
+					Monsters[user_monster-1].setHPtoMax();
+					cout<<"\n--------------------\nDo want to get the details of all the monsters for your next match? (y/n) : ";
+					try
+					{
+						cin>>printMonstersAgain;
+					}
+					
+					catch(...)
+					{
+						
+						while(printMonstersAgain != 'y' || printMonstersAgain != 'n')
+						{
+							cout<<"\nError\n--------------------\nDo want to get the details of all the monsters for your next match? (y/n) : ";
+							cin>>printMonstersAgain;
+						}
+						
+					}
+					
+					break;
 				}
-			}
-			computer_move = rand()%3+1;
-			cout<<"\n--------------------\n"<<Monsters[computer_monster].getName()<<" (Opponent) Choosed Move "<<computer_move<<" !\n--------------------"<<endl;
-			this_thread::sleep_for(chrono::seconds(1));
-			switch(computer_move)
+				
+				else if(Monsters[user_monster-1].getHP() <= 0)
 				{
-					case 1:
-						if(Monsters[computer_monster].Move1(Monsters[user_monster-1]))
-						{
-							cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-						}
-						else
-						{
-							cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-						}
-						this_thread::sleep_for(chrono::seconds(1));
-						break;
-					case 2:
-						if(Monsters[computer_monster].Move2(Monsters[user_monster-1]))
-						{
-							cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-						}
-						else
-						{
-							cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-						}
-						this_thread::sleep_for(chrono::seconds(1));
-						break;
-					case 3:
-						if(Monsters[computer_monster].Move3(Monsters[user_monster-1]))
-						{
-							cout<<"\n--------------------\nHIT !\n--------------------"<<endl;
-						}
-						else
-						{
-							cout<<"\n--------------------\nMISS !\n--------------------"<<endl;
-						}
-						this_thread::sleep_for(chrono::seconds(1));
-						break;
+					cout<<"\n--------------------\nYOU LOSE !\n--------------------"<<endl;
+					this_thread::sleep_for(chrono::seconds(1));
+					Monsters[computer_monster].setHPtoMax();
+					Monsters[user_monster-1].setHPtoMax();
+					undefeated = false;
+					break;
 				}
-		}
-		
-		else
-		{
-			if(Monsters[computer_monster].getHP() <= 0 && Monsters[user_monster-1].getHP() <= 0)
-			{
-				cout<<"\n--------------------\nDRAW !\n--------------------"<<endl;
-				break;
-			}
-			
-			else if(Monsters[computer_monster].getHP() <= 0)
-			{
-				cout<<"\n--------------------\nYOU WIN !\n--------------------"<<endl;
-				break;
-			}
-			
-			else if(Monsters[user_monster-1].getHP() <= 0)
-			{
-				cout<<"\n--------------------\nYOU LOSE !\n--------------------"<<endl;
-				break;
+				
 			}
 			
 		}
-		
 	}
-	
+	cout<<"\n--------------------\nSCORE : "<<MatchesWon<<"\n--------------------"<<endl;
 }
 
 int main()
