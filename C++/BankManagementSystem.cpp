@@ -18,10 +18,10 @@ class Bank
 			srand((unsigned)time(0));
 		}
 		
-		bool newAccount(string name, int age, int contactNumber, string userName, string pin)
+		bool newAccount(string name, int age, long contactNumber, string userName, string pin)
 		{
 			
-			if(age >= 18 && to_string(contactNumber).length() == 10 && pin.length() == 4)
+			if(age >= 18 && contactNumber >= 1000000000 && contactNumber <= 9999999999 && pin.length() == 4)
 			{
 				userDetails[1000 - accountsAvailable][0] = name;
 				userDetails[1000 - accountsAvailable][1] = to_string(age);
@@ -32,7 +32,7 @@ class Bank
 				accountDetails[1000 - accountsAvailable][2] = 0;
 				accountDetails[1000 - accountsAvailable][3] = 0;
 				
-				while(temporaryAccountNumber == 0 || to_string(temporaryAccountNumber).length() != 8 || to_string(temporaryAccountNumber)[0] == 0)
+				while(temporaryAccountNumber == 0 || to_string(temporaryAccountNumber).length() != 8 || to_string(temporaryAccountNumber)[0] == '0')
 				{
 					temporaryAccountNumber = rand()%100000000;
 				}
@@ -52,7 +52,7 @@ class Bank
 		string getAccountDetails(string userName, string pin)
 		{
 			bool correctDetails = false;
-			string details;
+			string details = "";
 			for(int i = 1000;i > accountsAvailable;i--)
 			{
 				if(userDetails[1000 - i][3] == userName)
@@ -170,13 +170,197 @@ class Bank
 
 int main()
 {
+	string name,userName,pin,userName2;
+	int age,amount;
+	long contactNumber;
+		
 	Bank BANK;
-	BANK.newAccount("User1",19,1111029189,"user1","1234");
-	BANK.newAccount("User2",19,2111028189,"user2","4321");
-	BANK.deposit("user1","1234",100);
-	BANK.deposit("user1","1234",400);
-	BANK.withdraw("user1","1234",400);
-	BANK.transferToUser("user1","1234","user2",100);
-	cout<<BANK.getAccountDetails("user1","1234")<<"--------------------\n"<<BANK.getAccountDetails("user2","4321");
+	
+	cout<<"========== BANK OF PROGRAMMERS ==========\n"<<endl;
+	
+	while(true)
+	{
+		cout<<"BOT : How can I assist you?"<<endl;
+		cout<<"\t1. Create new account"<<endl;
+		cout<<"\t2. View details of existing account"<<endl;
+		cout<<"\t3. Deposit money"<<endl;
+		cout<<"\t4. Withdraw money"<<endl;
+		cout<<"\t5. Transfer money to another user\n      [Enter the numerical value of the corresponding action you want to perform]\n"<<endl;
+		cout<<"USER : ";
+		
+		int userInput;
+		cin>>userInput;
+		
+		while(userInput < 1 || userInput > 5)
+		{
+			cout<<"\nBOT : Invalid input. Try again\n"<<endl;
+			cout<<"USER : ";
+			cin>>userInput;
+		}
+		
+		switch(userInput)
+		{
+			case 1:
+				cout<<"---------- CREATING NEW ACCOUNT ----------\n"<<endl;
+				cout<<"BOT : Enter your name\n"<<endl;
+				cout<<"USER : ";
+				cin>>name;
+				cout<<"\nBOT : Enter your age\n"<<endl;
+				cout<<"USER : ";
+				cin>>age;
+				
+				if(age < 18)
+				{
+					cout<<"\nBOT : Sorry, your age should be greater than or equal to 18 in order to create an account\n"<<endl;
+					cout<<"--------------------"<<endl;
+					break;
+				}
+				
+				cout<<"\nBOT : Enter your contact number(it should be of 10 digits)\n"<<endl;
+				cout<<"USER : ";
+				cin>>contactNumber;
+				cout<<"\nBOT : Enter a valid username\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName;
+				cout<<"\nBOT : Enter a valid 4-digit PIN\n"<<endl;
+				cout<<"USER : ";
+				cin>>pin;
+				
+				cout<<"--------------------"<<endl;
+				
+				if(BANK.newAccount(name,age,contactNumber,userName,pin))
+				{
+					cout<<"\nBOT : ACCOUNT SUCCESSFULLY CREATED\n"<<endl;
+				}
+				
+				else
+				{
+					cout<<"\nBOT : ERROR_AccountNotCreated\n"<<endl;
+				}
+				
+				cout<<"--------------------"<<endl;
+				
+				break;
+				
+			case 2:
+				cout<<"---------- VIEWING THE DETAILS OF AN EXISTING ACCOUNT ----------\n"<<endl;
+				cout<<"BOT : Enter your username\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName;
+				cout<<"\nBOT : Enter your PIN\n"<<endl;
+				cout<<"USER : ";
+				cin>>pin;
+				
+				if(BANK.getAccountDetails(userName,pin) == "")
+				{
+					cout<<"\nBOT : ERROR_AccountNotFound(username - "<<userName<<", PIN - "<<pin<<")\n"<<endl;
+				}
+				
+				else
+				{
+					cout<<"\nBOT : Details - "<<endl;
+					cout<<BANK.getAccountDetails(userName,pin)<<endl;
+				}
+				
+				break;
+			
+			case 3:
+				cout<<"---------- DEPOSITING MONEY ----------\n"<<endl;
+				cout<<"BOT : Enter your username\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName;
+				cout<<"\nBOT : Enter your PIN\n"<<endl;
+				cout<<"USER : ";
+				cin>>pin;
+				cout<<"\nBOT : Enter the amount you want to deposit\n"<<endl;
+				cout<<"USER : ";
+				cin>>amount;
+				
+				if(BANK.deposit(userName,pin,amount))
+				{
+					cout<<"\nBOT : "<<to_string(amount)<<" SUCCESSFULLY DEPOSITED\n"<<endl;
+				}
+				
+				else
+				{
+					cout<<"\nBOT : ERROR_AmountNotDeposited\n"<<endl;
+				}
+				
+				break;
+			
+			case 4:
+				cout<<"---------- WITHDRAWING MONEY ----------\n"<<endl;
+				cout<<"BOT : Enter your username\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName;
+				cout<<"\nBOT : Enter your PIN\n"<<endl;
+				cout<<"USER : ";
+				cin>>pin;
+				cout<<"\nBOT : Enter the amount you want to withdraw\n"<<endl;
+				cout<<"USER : ";
+				cin>>amount;
+				
+				if(BANK.withdraw(userName,pin,amount))
+				{
+					cout<<"\nBOT : "<<to_string(amount)<<" SUCCESSFULLY WITHDRAWN\n"<<endl;
+				}
+				
+				else
+				{
+					cout<<"\nBOT : ERROR_AmountNotWithdrawn(Make sure your account has sufficient balance)\n"<<endl;
+				}
+				
+				break;
+			
+			case 5:
+				cout<<"---------- TRANSFERRING MONEY ----------\n"<<endl;
+				cout<<"BOT : Enter your username\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName;
+				cout<<"\nBOT : Enter your PIN\n"<<endl;
+				cout<<"USER : ";
+				cin>>pin;
+				cout<<"\nBOT : Enter the username of the user you want to transfer the money to\n"<<endl;
+				cout<<"USER : ";
+				cin>>userName2;
+				cout<<"\nBOT : Enter the amount you want to transfer\n"<<endl;
+				cout<<"USER : ";
+				cin>>amount;
+				
+				if(BANK.transferToUser(userName,pin,userName2,amount))
+				{
+					cout<<"\nBOT : "<<to_string(amount)<<" SUCCESSFULLY TRANSFERRED\n"<<endl;
+				}
+				
+				else
+				{
+					cout<<"\nBOT : ERROR_AmountNotTransferred(Make sure your account has sufficient balance)\n"<<endl;
+				}
+				
+				break;
+		}
+		
+		cout<<"--------------------\n"<<endl;
+		cout<<"BOT : Is there anything else which I can help you with?(y/n)\n"<<endl;
+		char userIn;
+		cout<<"USER : ";
+		cin>>userIn;
+		
+		while(userIn != 'y' && userIn != 'n')
+		{
+			cout<<"USER : ";
+			cin>>userIn;
+		}
+		
+		if(userIn == 'n')
+		{
+			break;
+		}
+	}
+	
+	cout<<"\n--------------------"<<endl;
+	cout<<"BOT : Thank you for using our bank"<<endl;
+	cout<<"--------------------"<<endl;
+	
 	return 0;
 }
