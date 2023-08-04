@@ -1,5 +1,5 @@
-# Character User Interface Programs
-A collection of basic programs at beginner, intermediate, and advanced levels [NOTE : Some programs may by GUI].
+# Code Hub
+A `collection of basic programs` at beginner, intermediate, and advanced levels.
 
 ## Introduction
 
@@ -7,7 +7,7 @@ This repository contains a collection of programs that range from basic to advan
 
 ## Getting Started
 
-To use this repository, simply clone or download the repository to your local machine. Once you have the repository on your machine, you can access the programs by navigating to the appropriate directory.
+To use this repository, simply `clone` or download the repository to your local machine. Once you have the repository on your machine, you can `access` the programs by navigating to the appropriate directory.
 
 ## Credits
 These programs are developed by **Omanshu**.
