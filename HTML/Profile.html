@@ -1,7 +1,9 @@
 <html>
 
 <div align = "center">
+  <h1>
   <img src="https://readme-typing-svg.demolab.com?font=Handjet&size=120&duration=3800&pause=850&vCenter=true&width=570&height=100&lines=%22Hello+World!%22+;I+am+Omanshu" />
+  </h1>
 </div>
 
 <div align = "center">
