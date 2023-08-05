@@ -1,7 +1,7 @@
 <html>
 
 <div align = "center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=3800&pause=850&vCenter=true&width=350&height=100&lines=%22Hello+World!%22+;I+am+Omanshu" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=70&duration=3800&pause=850&vCenter=true&width=600&height=100&lines=%22Hello+World!%22+;I+am+Omanshu" />
 </div>
 
 <div align = "center">
