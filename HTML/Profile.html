@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 
 <div align = "center">
   <h1>
