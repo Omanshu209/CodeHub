@@ -1,8 +1,7 @@
 <html>
 
 <div align = "center">
-  <h1 align = "center">Hi, <img src = "https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" height = "50" />I'm Omanshu
-  </h1>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=3800&pause=850&vCenter=true&width=350&height=100&lines=%22Hello+World!%22+;I+am+Omanshu" />
 </div>
 
 <div align = "center">
