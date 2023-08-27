@@ -171,7 +171,7 @@ When it comes to game development, I enjoy using Pygame in Python to bring my id
   <details>
   
   <summary>
-  <h2> Quotes <img align ='center' src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/winkFace.gif' width = '32px' height= '32px'>
+  <h2> Quotes <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
   </h2>
   </summary>
   
@@ -192,7 +192,7 @@ I also have a fascination with machine learning and its applications. While my e
   <details>
   
   <summary>
-  <h2> Some Programming Humor for you <img align ='center' src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/winkFace.gif' width = '32px' height= '32px'>
+  <h2> Some Programming Humor for you <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
   </h2>
   </summary>
   
