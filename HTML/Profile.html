@@ -14,7 +14,8 @@
   <details>
   
   <summary>
-  <h2 align = "center">:)
+  <h2 align = "center">
+  :)
   </h2>
   </summary>
   
@@ -39,7 +40,8 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <details>
   
   <summary>
-  <h2 align = "center">My projects and repositories
+  <h2 align = "center">
+  My projects and repositories
   </h2>
   </summary>
   
@@ -49,7 +51,8 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <strong>All of my <code>projects</code> are available at </strong><a href="https://www.github.com/Omanshu209">Github</a>
   </p>
 
-  <h3 align = "center">Top Repositories (Projects)
+  <h3 align = "center">
+  Top Repositories (Projects)
   </h3>
   
   <a href="https://github.com/Omanshu209/Highway_Heist">
@@ -88,7 +91,8 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <details>
   
   <summary>
-  <h2 align="center">Languages and Tools  <img src = "https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/code.gif" width = 32px height=32px>
+  <h2 align="center">
+  Languages and Tools  <img src = "https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/code.gif" width = 32px height=32px>
   </h2>
   </summary>
   
@@ -171,7 +175,8 @@ When it comes to game development, I enjoy using Pygame in Python to bring my id
   <details>
   
   <summary>
-  <h2> Quotes <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
+  <h2>
+  Quotes <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
   </h2>
   </summary>
   
@@ -192,7 +197,8 @@ I also have a fascination with machine learning and its applications. While my e
   <details>
   
   <summary>
-  <h2> Some Programming Humor for you <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
+  <h2>
+  Some Programming Humor for you <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px' height= '32px'>
   </h2>
   </summary>
   
@@ -213,11 +219,13 @@ Beyond Python, I have experience in C++ and Java, allowing me to broaden my hori
   <details>
   
   <summary>
-  <h2 align = "center">My GitHub Stats
+  <h2 align = "center">
+  My GitHub Stats
   </h2>
   </summary>
   
-  <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=omanshu209&show_icons=true&theme=dracula&locale=en&rank_icon=github&include_all_commits=true" alt="omanshu209" />
+  <p>&nbsp;
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=omanshu209&show_icons=true&theme=dracula&locale=en&rank_icon=github&include_all_commits=true" alt="omanshu209" />
   </p>
   
   <a href="http://www.github.com/Omanshu209">
