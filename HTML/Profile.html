@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 <div align = "center">
   <h1>
   <img src="https://readme-typing-svg.demolab.com?font=Handjet&size=120&duration=3800&pause=850&vCenter=true&width=570&height=100&lines=%22Hello+World!%22+;I+am+Omanshu" />
@@ -242,5 +244,7 @@ Moreover, I've ventured into the world of robotics using micro-controllers(µC) 
 <div align = "center">
   <hr size = "5" width = "50%">
 </div>
+
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 </html>
