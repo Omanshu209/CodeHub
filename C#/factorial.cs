@@ -9,9 +9,7 @@ namespace Code
             int val = 1;
             
             for(;num > 1;num = num - 1)
-            {
-                val = val * num;
-            }
+            val = val * num;
             
             return val;
         }
