@@ -35,6 +35,9 @@ namespace Algorithms
             HiddenSize = hiddenSize;
             OutputSize = outputSize;
             
+            HiddenLayer = new double[HiddenSize];
+            OutputLayer = new double[OutputSize];
+            
             WeightsInputToHidden = new double[InputSize, HiddenSize];
             WeightsHiddenToOutput = new double[HiddenSize, OutputSize];
             
