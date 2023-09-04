@@ -6,12 +6,15 @@ namespace Algorithms
     {
         public static void Main(string[] args)
         {
+            /* NEURAL NETWORK
+            
             NeuralNetwork neuralNetwork = new NeuralNetwork(2, 3, 1);
             double[] inputLayer = {0.5, 0.7};
             double[] outputLayer = neuralNetwork.FeedForward(inputLayer);
             
             foreach(double output in outputLayer)
                 Console.WriteLine(output);
+            */
         }
     }
     
