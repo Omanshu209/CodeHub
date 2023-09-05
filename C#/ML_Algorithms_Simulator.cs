@@ -8,9 +8,17 @@ namespace Algorithms
         {
             /* NEURAL NETWORK
             
-            NeuralNetwork neuralNetwork = new NeuralNetwork(2, 3, 1);
-            double[] inputLayer = {0.5, 0.7};
-            double[] outputLayer = neuralNetwork.FeedForward(inputLayer);
+            NeuralNetwork neuralNetwork = new NeuralNetwork(5, 3, 5);
+            double[] inputLayer = {2.5, 7.1, 8.9, 11.0, 0};
+            double[] target = {5.0, 14.1, 17.8, 22.0, 0};
+            double learningRate = 0.1;
+            int numberOfEpochs = 100;
+            
+            for(int epoch = 0; epoch < numberOfEpochs; epoch++)
+                neuralNetwork.Train(inputLayer, target, learningRate);
+            
+            double[] input = {1, 1, 1, 1, 1};
+            double[] outputLayer = neuralNetwork.FeedForward(input);
             
             foreach(double output in outputLayer)
                 Console.WriteLine(output);
@@ -84,6 +92,36 @@ namespace Algorithms
         public double Sigmoid(double x)
         {
             return 1.0 / (1.0 + Math.Exp(-x));
+        }
+        
+        public void Train(double[] InputLayer, double[] target, double learningRate)
+        {
+            FeedForward(InputLayer);
+            
+            double[] outputErrors = new double[OutputSize];
+            for (int i = 0; i < OutputSize; i++)
+                outputErrors[i] = target[i] - OutputLayer[i];
+            
+            double[] hiddenErrors = new double[HiddenSize];
+            for (int i = 0; i < HiddenSize; i++)
+            {
+                double errorSum = 0;
+                for (int j = 0; j < OutputSize; j++)
+                    errorSum += outputErrors[j] * WeightsHiddenToOutput[i, j];
+                hiddenErrors[i] = HiddenLayer[i] * (1 - HiddenLayer[i]) * errorSum; 
+            }
+            
+            for(int i = 0; i < HiddenSize; i++)
+            {
+                for(int j = 0; j < OutputSize; j++)
+                    WeightsHiddenToOutput[i, j] += learningRate * outputErrors[j] * HiddenLayer[i];
+            }
+            
+            for(int i = 0; i < InputSize; i++)
+            {
+                for(int j = 0; j < HiddenSize; j++)
+                    WeightsInputToHidden[i, j] += learningRate * hiddenErrors[j] * InputLayer[i];
+            }
         }
     }
 }
