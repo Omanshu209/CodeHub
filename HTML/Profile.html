@@ -131,6 +131,10 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <a href="https://www.java.com" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
   </a>
+
+  <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
+  </a>
   
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
@@ -140,20 +144,20 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
   </a>
   
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/995229e2-244b-457f-968d-bcbe8277498e" alt="git" width="70" height="40"/>
+  <a href="" target="_blank" rel="noreferrer">
+  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/995229e2-244b-457f-968d-bcbe8277498e" alt="pygame" width="70" height="40"/>
   </a>
   
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/44238eb5-3725-417b-b91b-e41b1fec2c46" alt="git" width="40" height="40"/>
+  <a href="" target="_blank" rel="noreferrer">
+  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/44238eb5-3725-417b-b91b-e41b1fec2c46" alt="kivy" width="40" height="40"/>
   </a>
   
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/59239534-bbee-4bb0-bdf4-927b2a1d2690" alt="git" width="40" height="40"/>
+  <a href="" target="_blank" rel="noreferrer">
+  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/59239534-bbee-4bb0-bdf4-927b2a1d2690" alt="kivyMD" width="40" height="40"/>
   </a>
   
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/b683cfea-5250-4792-bbfa-611d2e17dab3" alt="git" width="40" height="40"/>
+  <a href="" target="_blank" rel="noreferrer">
+  <img src="https://github.com/Omanshu209/Omanshu209/assets/114089324/b683cfea-5250-4792-bbfa-611d2e17dab3" alt="jupyter-notebook" width="40" height="40"/>
   </a>
   
   </p>
