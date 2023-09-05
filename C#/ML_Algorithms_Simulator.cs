@@ -6,17 +6,20 @@ namespace Algorithms
     {
         public static void Main(string[] args)
         {
-            /* NEURAL NETWORK
+            /* NEURAL NETWORK */
             
+            /*
             NeuralNetwork neuralNetwork = new NeuralNetwork(5, 3, 5);
             double[] inputLayer = {2.5, 7.1, 8.9, 11.0, 0};
             double[] target = {5.0, 14.1, 17.8, 22.0, 0};
             double learningRate = 0.1;
             int numberOfEpochs = 100;
             
+            // Training
             for(int epoch = 0; epoch < numberOfEpochs; epoch++)
                 neuralNetwork.Train(inputLayer, target, learningRate);
             
+            // Predicting
             double[] input = {1, 1, 1, 1, 1};
             double[] outputLayer = neuralNetwork.Predict(input);
             
@@ -26,6 +29,7 @@ namespace Algorithms
         }
     }
     
+    // Feed-Forward Neural Network
     public class NeuralNetwork
     {
         private int InputSize;
@@ -40,6 +44,7 @@ namespace Algorithms
         
         private Random random = new Random();
         
+        // Constructor
         public NeuralNetwork(int inputSize, int hiddenSize, int outputSize)
         {
             InputSize = inputSize;
@@ -89,11 +94,13 @@ namespace Algorithms
             return OutputLayer;
         }
         
+        // Sigmoid Function
         public double Sigmoid(double x)
         {
             return 1.0 / (1.0 + Math.Exp(-x));
         }
         
+        // Back-Propagation
         public void Train(double[] InputLayer, double[] target, double learningRate)
         {
             FeedForward(InputLayer);
@@ -111,6 +118,7 @@ namespace Algorithms
                 hiddenErrors[i] = HiddenLayer[i] * (1 - HiddenLayer[i]) * errorSum; 
             }
             
+            // Adjusting the weights
             for(int i = 0; i < HiddenSize; i++)
             {
                 for(int j = 0; j < OutputSize; j++)
@@ -124,6 +132,7 @@ namespace Algorithms
             }
         }
         
+        // Prediction
         public double[] Predict(double[] input)
         {
             return FeedForward(input);
