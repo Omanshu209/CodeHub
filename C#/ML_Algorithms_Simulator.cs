@@ -18,7 +18,7 @@ namespace Algorithms
                 neuralNetwork.Train(inputLayer, target, learningRate);
             
             double[] input = {1, 1, 1, 1, 1};
-            double[] outputLayer = neuralNetwork.FeedForward(input);
+            double[] outputLayer = neuralNetwork.Predict(input);
             
             foreach(double output in outputLayer)
                 Console.WriteLine(output);
@@ -122,6 +122,11 @@ namespace Algorithms
                 for(int j = 0; j < HiddenSize; j++)
                     WeightsInputToHidden[i, j] += learningRate * hiddenErrors[j] * InputLayer[i];
             }
+        }
+        
+        public double[] Predict(double[] input)
+        {
+            return FeedForward(input);
         }
     }
 }
