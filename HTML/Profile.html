@@ -20,6 +20,10 @@
   :)
   </h2>
   </summary>
+
+  <b>
+    Currently reading📖 <code>Dracula</code> by <code>Bram Stoker</code>!
+  </b>
   
   <p align="left">
   <img src="https://komarev.com/ghpvc/?username=omanshu209&label=Profile%20views&color=0e75b6&style=flat" alt="omanshu209" />
