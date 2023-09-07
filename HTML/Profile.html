@@ -26,7 +26,8 @@
   </b>
   
   <p align="left">
-  <img src="https://komarev.com/ghpvc/?username=omanshu209&label=Profile%20views&color=0e75b6&style=flat" alt="omanshu209" />
+  <img src="https://img.shields.io/github/followers/Omanshu209?label=follow&logo=github&style=flat-square" />
+  <img src="https://komarev.com/ghpvc/?username=omanshu209&label=Profile%20views&color=0e75b6&style=flat-square" alt="omanshu209" />
   </p>
   
   <img src = "https://github.com/Omanshu209/Omanshu209/assets/114089324/063a08f4-7203-4457-b9f1-1a86af7e3bc7" />
