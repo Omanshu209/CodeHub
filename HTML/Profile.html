@@ -168,7 +168,7 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   </p>
 
   <p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=omanshu209&show_icons=true&theme=radical&locale=en&langs_count=10&layout=donut-vertical" alt="omanshu209" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=omanshu209&show_icons=true&theme=radical&locale=en&langs_count=12&layout=donut-vertical" alt="omanshu209" />
   </p>
   
   <pre>
