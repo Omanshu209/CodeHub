@@ -32,16 +32,16 @@ public class NumberSystemConverter
 	{
 		//Scanner sc = new Scanner(System.in);
 		
-		/* BINARY TO DECIMAL
+		/* DECIMAL TO BINARY
 		
-		System.out.print("Enter the binary number : ");
-		long binary = sc.nextLong();
+		System.out.print("Enter the decimal number : ");
+		int decimal = sc.nextInt();
 		
-		System.out.println("Decimal number : " + decimalToBinary(binary));
+		System.out.println("Decimal number : " + decimalToBinary(decimal));
 		
 		*/
 		
-		/* DECIMAL TO BINARY
+		/* BINARY TO DECIMAL
 		
 		System.out.print("Enter the binary number : ");
 		long binary = sc.nextLong();
