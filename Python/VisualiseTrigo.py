@@ -6,10 +6,10 @@ def create_data():
 	This function creates data for plotting
 	'''
 	
-	x : np.ndarray = np.array([i * 15 for i in np.arange(0, 7)])
+	x : np.ndarray = np.array([i for i in np.arange(0, 360)])
 	
-	y_sin : np.ndarray = np.array([np.sin((np.pi * i * 15) / 180) for i in np.arange(0, 7)])
-	y_cos : np.ndarray = np.array([np.cos((np.pi * i * 15) / 180) for i in np.arange(0, 7)])
+	y_sin : np.ndarray = np.array([np.sin((np.pi * i) / 180) for i in np.arange(0, 360)])
+	y_cos : np.ndarray = np.array([np.cos((np.pi * i) / 180) for i in np.arange(0, 360)])
 	
 	#y_tan : np.ndarray = np.array([np.tan((np.pi * i * 15) / 180) for i in np.arange(0, 7)])
 	#y_cosec : np.ndarray = np.array([1 / np.sin((np.pi * i * 15) / 180) for i in np.arange(0, 7)])
