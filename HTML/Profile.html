@@ -190,7 +190,7 @@ When it comes to game development, I enjoy using Pygame in Python to bring my id
   <img src = "https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
   
   <pre>
-I also have a fascination with machine learning and its applications. While my experience in this field is still growing, I've dabbled with scikit-learn in Python to explore the fundamentals of machine learning algorithms and their potential uses.
+I also have a fascination with machine learning and its applications. While my experience in this field is still growing, I've dabbled with PyTorch and scikit-learn in Python to explore the fundamentals of machine learning algorithms and their potential uses.
   </pre>
   
   </details>
