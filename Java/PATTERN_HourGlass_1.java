@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Hour_Glass_PATTERN
+public class Hour_Glass_PATTERN_1
 {
 	public static void main(String[] args)
 	{
