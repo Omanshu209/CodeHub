@@ -6,7 +6,7 @@
 25 , 16 , 9 , 4 , 1 , 
 */
 
-public class pattern
+public class NumMul_Triangle
 {
 	public static void main(String[] args)
 	{
