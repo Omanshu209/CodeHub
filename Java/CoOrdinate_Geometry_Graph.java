@@ -58,7 +58,7 @@ public class CoOrdinate_Geometry
 				// Straight Line Equation : y = mx + c
 				double new_x = (i - y_intercept) / slope;
 							
-				for(double j = -10 ; j <= 10 ; j+=0.5)
+				for(double j = -10 ; j <= 10 ; j += 0.5)
 				{
 					if(j == new_x || (j == (int)new_x && isDecimal))
 						System.out.print('*');
