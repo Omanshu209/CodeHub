@@ -236,6 +236,10 @@ Beyond Python, I have experience in C++ and Java, allowing me to broaden my hori
   <a href="http://www.github.com/Omanshu209">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Omanshu209&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
   </a>
+
+  <a href="http://www.github.com/Omanshu209">
+  <img src="https://github-profile-trophy.vercel.app/?username=omanshu209&theme=radical&no-frame=false&no-bg=true&margin-w=4" />
+  </a>
   
   <pre>
 Moreover, I've ventured into the world of robotics using micro-controllers(µC) such as Arduino and ESP32, enabling me to combine software and hardware to create exciting projects.
