@@ -60,17 +60,17 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   Top Repositories (Projects)
   </h3>
   
-  <a href="https://github.com/Omanshu209/Highway_Heist">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Highway_Heist&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516"
-  href="https://github.com/Omanshu209/Highway_Heist" />
+  <a href="https://github.com/Omanshu209/Highway-Heist">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Highway-Heist&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516"
+  href="https://github.com/Omanshu209/Highway-Heist" />
   </a>
   
-  <a href="https://github.com/Omanshu209/ANN_ClassifierHub">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=ANN_ClassifierHub&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
+  <a href="https://github.com/Omanshu209/ANN-Classifier-Hub">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=ANN-Classifier-Hub&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
   </a>
   
-  <a href="https://github.com/Omanshu209/Diagnosify_ML">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Diagnosify_ML&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
+  <a href="https://github.com/Omanshu209/Diagnosify-ML">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Diagnosify-ML&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
   </a>
   
   <a href="https://github.com/Omanshu209/PokeVinci">
@@ -81,8 +81,8 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=ExploreWiki&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
   </a>
   
-  <a href="https://github.com/Omanshu209/PyDuino_Bot-WiFi">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=PyDuino_Bot-WiFi&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
+  <a href="https://github.com/Omanshu209/PyDuino-Bot-IoT">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=PyDuino-Bot-IoT&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151516" />
   </a>
   
   </details>
