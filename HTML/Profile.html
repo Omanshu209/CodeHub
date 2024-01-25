@@ -73,16 +73,16 @@ Hello there! I'm a programming enthusiast with a keen interest in game developme
   <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=PyDuino-Bot-IoT&theme=gruvbox_light" />
   </a>
   
-  <a href="https://github.com/Omanshu209/Diagnosify-ML">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Diagnosify-ML&theme=gruvbox_light" />
+  <a href="https://github.com/Omanshu209/Disney-Trailer-Hub-AI">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Disney-Trailer-Hub-AI&theme=gruvbox_light" />
+  </a>
+  
+  <a href="https://github.com/Omanshu209/Diagnosify-KNN">
+  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Diagnosify-KNN&theme=gruvbox_light" />
   </a>
   
   <a href="https://github.com/Omanshu209/ExploreWiki">
   <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=ExploreWiki&theme=gruvbox_light" />
-  </a>
-  
-  <a href="https://github.com/Omanshu209/Disney-Character-Classifier">
-  <img align="center" style="margin:0.5rem" src="https://github-readme-stats.vercel.app/api/pin/?username=Omanshu209&repo=Disney-Character-Classifier&theme=gruvbox_light" />
   </a>
   
   <a href="https://github.com/Omanshu209/CNN-Classifier-Hub">
