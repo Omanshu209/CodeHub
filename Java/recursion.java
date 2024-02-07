@@ -49,11 +49,33 @@ public class recursion
 		}
 		
 		if(str.charAt(index) == 'x')
-			count += 1;
+			count++;
 		else
 			newStr += str.charAt(index);
 		
 		return sepChars(str, index + 1);
+	}
+	
+	//private static String newStr = "";
+	private static String removeDuplicates(String str, int index)
+	{
+		if(index == str.length())
+			return newStr;
+		
+		boolean isDuplicate = false;
+		for(int i = 0 ; i < newStr.length() ; i++)
+		{
+			if(str.charAt(index) == newStr.charAt(i))
+			{
+				isDuplicate = true;
+				break;
+			}
+		}
+		
+		if(!(isDuplicate))
+			newStr += str.charAt(index);
+		
+		return removeDuplicates(str, index + 1);
 	}
 	
 	public static void main(String[] args)
@@ -79,6 +101,11 @@ public class recursion
 		/*
 		String str = "axbxxcdxxxxe";
 		System.out.println(sepChars(str, 0));
+		*/
+		
+		/*
+		String str = "abbcccdeddef";
+		System.out.println(removeDuplicates(str, 0));
 		*/
 	}
 }
