@@ -78,6 +78,42 @@ public class recursion
 		return removeDuplicates(str, index + 1);
 	}
 	
+	private static void printSubsequences(String str, int index, String newStr)
+	{
+		if(index == str.length())
+		{
+			System.out.println(newStr);
+			return;
+		}
+		
+		printSubsequences(str, index + 1, newStr + str.charAt(index));
+		printSubsequences(str, index + 1, newStr);
+	}
+	
+	private static void printUniqueSubsequences(String str, int index, String newStr,String[] unique)
+	{
+		if(index == str.length())
+		{
+			for(int i = 0 ; i < unique.length ; i++)
+			{
+				if(newStr.equals(unique[i]))
+					break;
+				
+				else if(unique[i] == null)
+				{
+					unique[i] = newStr;
+					System.out.println(newStr);
+					break;
+				}
+			}
+			
+			return;
+		}
+		
+		printUniqueSubsequences(str, index + 1, newStr + str.charAt(index), unique);
+		printUniqueSubsequences(str, index + 1, newStr, unique);
+	}
+	
 	public static void main(String[] args)
 	{
 		/*
@@ -106,6 +142,17 @@ public class recursion
 		/*
 		String str = "abbcccdeddef";
 		System.out.println(removeDuplicates(str, 0));
+		*/
+		
+		/*
+		String str = "abcde";
+		printSubsequences(str, 0, "");
+		*/
+		
+		/*
+		String str = "aaaaaaaaaaa";
+		String[] unique = new String[(int)Math.pow(2, str.length())];
+		printUniqueSubsequences(str, 0, "", unique);
 		*/
 	}
 }
