@@ -114,6 +114,21 @@ public class recursion
 		printUniqueSubsequences(str, index + 1, newStr, unique);
 	}
 	
+	//private static int count = 0;
+	private static int countPath(int x_des, int y_des, int x_pos, int y_pos)
+	{
+		if(x_pos == x_des && y_pos == y_des)
+			return count++;
+		
+		if(x_pos != x_des)
+			countPath(x_des, y_des, x_pos + 1, y_pos);
+		
+		if(y_pos != y_des)
+			countPath(x_des, y_des, x_pos, y_pos + 1);
+		
+		return count;
+	}
+	
 	public static void main(String[] args)
 	{
 		/*
@@ -154,5 +169,7 @@ public class recursion
 		String[] unique = new String[(int)Math.pow(2, str.length())];
 		printUniqueSubsequences(str, 0, "", unique);
 		*/
+		
+		//System.out.println(countPath(2, 2, 0, 0));
 	}
 }
