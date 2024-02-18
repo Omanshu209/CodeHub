@@ -1,12 +1,12 @@
 class linkedList
 {
-	Node head = null;
-	int size = 0;
+	private Node head = null;
+	private int size = 0;
 	
 	private class Node
 	{
-		int data;
-		Node next;
+		public int data;
+		public Node next;
 		
 		Node(int data)
 		{
@@ -21,7 +21,7 @@ class linkedList
 		return head == null; //return size == 0;
 	}
 	
-	public int size()
+	public int getSize()
 	{
 		return size;
 	}
@@ -119,6 +119,8 @@ public class Main
 		ll.addFirst(54);
 		ll.removeLast();
 		ll.printLL();
+		
+		System.out.println(ll.getSize());
 		*/
 	}
 }
