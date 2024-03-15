@@ -1,5 +1,8 @@
-// Sort a number in ascending order of its digits
-// using only the Integer data type
+/*
+WAP to enter a number. Sort its digits
+in ascending order using only the 
+'int' data type
+*/
 
 import java.util.Scanner;
 
